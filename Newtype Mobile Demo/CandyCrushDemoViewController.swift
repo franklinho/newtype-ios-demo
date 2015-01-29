@@ -84,6 +84,7 @@ class CandyCrushDemoViewController: UIViewController {
     }
     @IBAction func stripedLollipopBuyButtonWasTapped(sender: AnyObject) {
         println("Buy")
+        
         self.purchaseCompleteView.alpha = 0
         self.purchaseCompleteView.hidden = false
         UIView.animateWithDuration(0.3,

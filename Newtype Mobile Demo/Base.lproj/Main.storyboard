@@ -234,13 +234,13 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aEN-Pk-ajd" userLabel="LollipopView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEN-Pk-ajd" userLabel="LollipopView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="candy_lollipop.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="kHr-DV-jmF">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="candy_lollipop.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="kHr-DV-jmF">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQe-pz-hFj">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQe-pz-hFj">
                                         <rect key="frame" x="410" y="115" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="MAt-HS-qee"/>
@@ -253,7 +253,7 @@
                                             <action selector="lollipopViewCloseButtonWasTapped:" destination="e7B-tF-NcD" eventType="touchUpInside" id="1f0-36-vpe"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJB-pm-SwO">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJB-pm-SwO">
                                         <rect key="frame" x="150" y="387" width="300" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="3o7-Pj-POb"/>
@@ -390,14 +390,18 @@
                             <constraint firstAttribute="trailingMargin" secondItem="kZ1-Bs-n6l" secondAttribute="trailing" constant="-16" id="3D1-aZ-Tu6"/>
                             <constraint firstItem="kZ1-Bs-n6l" firstAttribute="top" secondItem="RgP-0h-gzb" secondAttribute="topMargin" id="9VA-rV-bU1"/>
                             <constraint firstItem="xzj-cV-33o" firstAttribute="top" secondItem="kJm-9M-bbF" secondAttribute="bottom" id="Cm3-Jw-xvt"/>
+                            <constraint firstItem="xzj-cV-33o" firstAttribute="top" secondItem="aEN-Pk-ajd" secondAttribute="bottom" id="FxK-Sc-uiw"/>
                             <constraint firstItem="kJm-9M-bbF" firstAttribute="top" secondItem="RgP-0h-gzb" secondAttribute="topMargin" id="NQb-Xp-iDL"/>
                             <constraint firstItem="kJm-9M-bbF" firstAttribute="leading" secondItem="RgP-0h-gzb" secondAttribute="leadingMargin" constant="-16" id="OJd-KN-pGq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aLX-WM-A6h" secondAttribute="trailing" constant="-16" id="PEe-zu-jMH"/>
                             <constraint firstItem="xzj-cV-33o" firstAttribute="top" secondItem="kZ1-Bs-n6l" secondAttribute="bottom" id="PWA-be-2aV"/>
+                            <constraint firstItem="aEN-Pk-ajd" firstAttribute="leading" secondItem="RgP-0h-gzb" secondAttribute="leadingMargin" constant="-16" id="Ve4-u3-Kkb"/>
                             <constraint firstItem="aLX-WM-A6h" firstAttribute="leading" secondItem="RgP-0h-gzb" secondAttribute="leadingMargin" constant="-16" id="YBe-Ol-NhN"/>
                             <constraint firstAttribute="centerX" secondItem="c4b-hC-9gb" secondAttribute="centerX" id="YqN-nT-Cdr"/>
                             <constraint firstAttribute="centerY" secondItem="c4b-hC-9gb" secondAttribute="centerY" id="giW-mj-hpB"/>
                             <constraint firstItem="xzj-cV-33o" firstAttribute="top" secondItem="aLX-WM-A6h" secondAttribute="bottom" id="ims-Oa-otA"/>
+                            <constraint firstItem="aEN-Pk-ajd" firstAttribute="top" secondItem="RgP-0h-gzb" secondAttribute="topMargin" id="jim-87-ney"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aEN-Pk-ajd" secondAttribute="trailing" constant="-16" id="lJQ-rK-bFs"/>
                             <constraint firstItem="aLX-WM-A6h" firstAttribute="top" secondItem="RgP-0h-gzb" secondAttribute="topMargin" id="twN-je-Vb3"/>
                             <constraint firstItem="kZ1-Bs-n6l" firstAttribute="leading" secondItem="RgP-0h-gzb" secondAttribute="leadingMargin" constant="-16" id="vzv-k5-293"/>
                         </constraints>

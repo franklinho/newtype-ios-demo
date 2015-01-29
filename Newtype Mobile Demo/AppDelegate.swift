@@ -55,6 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 var productIDString = str.substringFromIndex(advance(str.startIndex, 1))
                 bestBuyDetailViewController.productID = productIDString.toInt()
                 bestBuyDetailViewController.title = bestBuyViewController.bestBuyProductNames[find(bestBuyViewController.bestBuyProducts,productIDString.toInt()!)!]
+                bestBuyDetailViewController.productPrice = bestBuyViewController.bestBuyProductPrices[find(bestBuyViewController.bestBuyProducts,productIDString.toInt()!)!]
                 rootViewController.pushViewController(bestBuyDetailViewController, animated: true)
             }
             
