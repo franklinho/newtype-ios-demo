@@ -117,19 +117,15 @@
 		DDDC819E1A76BB63009B233A /* Newtype Mobile Demo */ = {
 			isa = PBXGroup;
 			children = (
+				DDFDD2601A7ACD8F008DDE8C /* CandyCrushDemo */,
 				DDE3AB121A771073005FD592 /* BestBuyDemo */,
-				DDE3AB071A770F0B005FD592 /* Candy Crush Images */,
 				DDA43F7F1A76D7050074FDCD /* cart.png */,
 				DDA43F811A76DBD80074FDCD /* close_button.png */,
 				DDDC81A11A76BB64009B233A /* AppDelegate.swift */,
 				DDDC81A31A76BB64009B233A /* ViewController.swift */,
 				DDDC81A51A76BB64009B233A /* Main.storyboard */,
-				DDE3AB131A771224005FD592 /* CandyCrushDemoViewController.swift */,
-				DDDC81C11A76BC0E009B233A /* BestBuyTableViewCell.swift */,
-				DDE3AB101A771001005FD592 /* CandyCrushTableViewCell.swift */,
 				DDDC81A81A76BB64009B233A /* Images.xcassets */,
 				DDDC81AA1A76BB64009B233A /* LaunchScreen.xib */,
-				DDDC81D61A76C763009B233A /* BestBuyDemoTableViewCell.swift */,
 				DDDC819F1A76BB63009B233A /* Supporting Files */,
 			);
 			path = "Newtype Mobile Demo";
@@ -191,9 +187,21 @@
 			children = (
 				DDDC81C31A76C077009B233A /* BestBuyDemoViewController.swift */,
 				DDA43F7B1A76D0560074FDCD /* BestBuyDemoDetailViewController.swift */,
+				DDDC81C11A76BC0E009B233A /* BestBuyTableViewCell.swift */,
+				DDDC81D61A76C763009B233A /* BestBuyDemoTableViewCell.swift */,
 				DDDC81C51A76C4C6009B233A /* Best Buy Images */,
 			);
 			name = BestBuyDemo;
+			sourceTree = "<group>";
+		};
+		DDFDD2601A7ACD8F008DDE8C /* CandyCrushDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DDE3AB131A771224005FD592 /* CandyCrushDemoViewController.swift */,
+				DDE3AB101A771001005FD592 /* CandyCrushTableViewCell.swift */,
+				DDE3AB071A770F0B005FD592 /* Candy Crush Images */,
+			);
+			name = CandyCrushDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

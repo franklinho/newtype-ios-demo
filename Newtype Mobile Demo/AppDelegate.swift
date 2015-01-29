@@ -65,7 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 candyCrushViewController.buyGoldHidden = false
             } else if url.path == "/lollipop"{
                 candyCrushViewController.lollipopHidden = false
-            } else if url.path == "/stripedlollipop"{
+            } else if url.path == "/stripelollipop"{
                 candyCrushViewController.stripedLollipopHidden = false
             }
             

@@ -170,51 +170,6 @@
                                     <constraint firstItem="54H-q2-NOg" firstAttribute="leading" secondItem="aLX-WM-A6h" secondAttribute="leading" id="xew-xP-WrP"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEN-Pk-ajd" userLabel="LollipopView">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="candy_lollipop.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="kHr-DV-jmF">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQe-pz-hFj">
-                                        <rect key="frame" x="410" y="115" width="60" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="MAt-HS-qee"/>
-                                            <constraint firstAttribute="width" constant="60" id="hOS-cS-fsp"/>
-                                        </constraints>
-                                        <state key="normal">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="lollipopViewCloseButtonWasTapped:" destination="e7B-tF-NcD" eventType="touchUpInside" id="1f0-36-vpe"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJB-pm-SwO">
-                                        <rect key="frame" x="150" y="387" width="300" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="3o7-Pj-POb"/>
-                                            <constraint firstAttribute="height" constant="100" id="Xdm-KJ-ONQ"/>
-                                        </constraints>
-                                        <state key="normal">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buyButtonWasTapped:" destination="e7B-tF-NcD" eventType="touchUpInside" id="vEj-WU-RDs"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="kHr-DV-jmF" firstAttribute="top" secondItem="aEN-Pk-ajd" secondAttribute="top" id="4bZ-lN-SCg"/>
-                                    <constraint firstAttribute="bottom" secondItem="kHr-DV-jmF" secondAttribute="bottom" id="5gt-QD-sP3"/>
-                                    <constraint firstAttribute="centerX" secondItem="NJB-pm-SwO" secondAttribute="centerX" id="F4e-yu-EUa"/>
-                                    <constraint firstAttribute="trailing" secondItem="cQe-pz-hFj" secondAttribute="trailing" id="ZVa-y4-nsm"/>
-                                    <constraint firstItem="kHr-DV-jmF" firstAttribute="leading" secondItem="aEN-Pk-ajd" secondAttribute="leading" id="gRs-gF-RNI"/>
-                                    <constraint firstItem="NJB-pm-SwO" firstAttribute="top" secondItem="cQe-pz-hFj" secondAttribute="bottom" constant="212" id="lJx-3a-MzR"/>
-                                    <constraint firstItem="cQe-pz-hFj" firstAttribute="top" secondItem="aEN-Pk-ajd" secondAttribute="top" constant="115" id="rXg-2f-ujn"/>
-                                    <constraint firstAttribute="trailing" secondItem="kHr-DV-jmF" secondAttribute="trailing" id="sGp-nw-yP2"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kJm-9M-bbF" userLabel="StripedLollipopView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
@@ -245,7 +200,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="buyButtonWasTapped:" destination="e7B-tF-NcD" eventType="touchUpInside" id="QAy-Vs-46h"/>
+                                            <action selector="stripedLollipopBuyButtonWasTapped:" destination="e7B-tF-NcD" eventType="touchUpInside" id="EUv-ue-fP0"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -278,6 +233,51 @@
                                         <exclude reference="zJA-dd-Fms"/>
                                     </mask>
                                 </variation>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aEN-Pk-ajd" userLabel="LollipopView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="candy_lollipop.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="kHr-DV-jmF">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQe-pz-hFj">
+                                        <rect key="frame" x="410" y="115" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="MAt-HS-qee"/>
+                                            <constraint firstAttribute="width" constant="60" id="hOS-cS-fsp"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="lollipopViewCloseButtonWasTapped:" destination="e7B-tF-NcD" eventType="touchUpInside" id="1f0-36-vpe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJB-pm-SwO">
+                                        <rect key="frame" x="150" y="387" width="300" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="3o7-Pj-POb"/>
+                                            <constraint firstAttribute="height" constant="100" id="Xdm-KJ-ONQ"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="lollipopBuyButtonWasTapped:" destination="e7B-tF-NcD" eventType="touchUpInside" id="ZaB-92-yPX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="kHr-DV-jmF" firstAttribute="top" secondItem="aEN-Pk-ajd" secondAttribute="top" id="4bZ-lN-SCg"/>
+                                    <constraint firstAttribute="bottom" secondItem="kHr-DV-jmF" secondAttribute="bottom" id="5gt-QD-sP3"/>
+                                    <constraint firstAttribute="centerX" secondItem="NJB-pm-SwO" secondAttribute="centerX" id="F4e-yu-EUa"/>
+                                    <constraint firstAttribute="trailing" secondItem="cQe-pz-hFj" secondAttribute="trailing" id="ZVa-y4-nsm"/>
+                                    <constraint firstItem="kHr-DV-jmF" firstAttribute="leading" secondItem="aEN-Pk-ajd" secondAttribute="leading" id="gRs-gF-RNI"/>
+                                    <constraint firstItem="NJB-pm-SwO" firstAttribute="top" secondItem="cQe-pz-hFj" secondAttribute="bottom" constant="212" id="lJx-3a-MzR"/>
+                                    <constraint firstItem="cQe-pz-hFj" firstAttribute="top" secondItem="aEN-Pk-ajd" secondAttribute="top" constant="115" id="rXg-2f-ujn"/>
+                                    <constraint firstAttribute="trailing" secondItem="kHr-DV-jmF" secondAttribute="trailing" id="sGp-nw-yP2"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kZ1-Bs-n6l" userLabel="BuyGoldView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -388,17 +388,12 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="kJm-9M-bbF" secondAttribute="trailing" constant="-16" id="0nv-Tg-oVy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kZ1-Bs-n6l" secondAttribute="trailing" constant="-16" id="3D1-aZ-Tu6"/>
-                            <constraint firstAttribute="trailing" secondItem="aEN-Pk-ajd" secondAttribute="trailing" id="8cu-h4-IuH"/>
                             <constraint firstItem="kZ1-Bs-n6l" firstAttribute="top" secondItem="RgP-0h-gzb" secondAttribute="topMargin" id="9VA-rV-bU1"/>
                             <constraint firstItem="xzj-cV-33o" firstAttribute="top" secondItem="kJm-9M-bbF" secondAttribute="bottom" id="Cm3-Jw-xvt"/>
-                            <constraint firstItem="aEN-Pk-ajd" firstAttribute="leading" secondItem="RgP-0h-gzb" secondAttribute="leading" id="Gge-w7-mMI"/>
-                            <constraint firstItem="aEN-Pk-ajd" firstAttribute="top" secondItem="RgP-0h-gzb" secondAttribute="topMargin" id="J3B-jx-cGs"/>
                             <constraint firstItem="kJm-9M-bbF" firstAttribute="top" secondItem="RgP-0h-gzb" secondAttribute="topMargin" id="NQb-Xp-iDL"/>
                             <constraint firstItem="kJm-9M-bbF" firstAttribute="leading" secondItem="RgP-0h-gzb" secondAttribute="leadingMargin" constant="-16" id="OJd-KN-pGq"/>
-                            <constraint firstItem="aEN-Pk-ajd" firstAttribute="top" secondItem="Kfp-Sn-MmW" secondAttribute="bottom" id="OnC-Vf-urV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aLX-WM-A6h" secondAttribute="trailing" constant="-16" id="PEe-zu-jMH"/>
                             <constraint firstItem="xzj-cV-33o" firstAttribute="top" secondItem="kZ1-Bs-n6l" secondAttribute="bottom" id="PWA-be-2aV"/>
-                            <constraint firstItem="xzj-cV-33o" firstAttribute="top" secondItem="aEN-Pk-ajd" secondAttribute="bottom" id="PoK-9a-pd2"/>
                             <constraint firstItem="aLX-WM-A6h" firstAttribute="leading" secondItem="RgP-0h-gzb" secondAttribute="leadingMargin" constant="-16" id="YBe-Ol-NhN"/>
                             <constraint firstAttribute="centerX" secondItem="c4b-hC-9gb" secondAttribute="centerX" id="YqN-nT-Cdr"/>
                             <constraint firstAttribute="centerY" secondItem="c4b-hC-9gb" secondAttribute="centerY" id="giW-mj-hpB"/>
@@ -406,15 +401,10 @@
                             <constraint firstItem="aLX-WM-A6h" firstAttribute="top" secondItem="RgP-0h-gzb" secondAttribute="topMargin" id="twN-je-Vb3"/>
                             <constraint firstItem="kZ1-Bs-n6l" firstAttribute="leading" secondItem="RgP-0h-gzb" secondAttribute="leadingMargin" constant="-16" id="vzv-k5-293"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="OnC-Vf-urV"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="buyGoldView" destination="kZ1-Bs-n6l" id="O55-8d-bjN"/>
-                        <outlet property="lollipopView" destination="aEN-Pk-ajd" id="jee-px-tWl"/>
+                        <outlet property="lollipopView" destination="aEN-Pk-ajd" id="l4u-tA-Dhj"/>
                         <outlet property="purchaseCompleteView" destination="c4b-hC-9gb" id="Uzk-He-Ii4"/>
                         <outlet property="stripedLollipopView" destination="kJm-9M-bbF" id="sIF-HY-ek8"/>
                     </connections>

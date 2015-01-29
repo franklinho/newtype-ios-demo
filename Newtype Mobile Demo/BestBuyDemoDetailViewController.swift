@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import AdSupport
 
 class BestBuyDemoDetailViewController: UIViewController {
     
     @IBOutlet weak var purchaseCompleteView: UIView!
     @IBOutlet weak var buyButton: UIButton!
     var productID : Int?
+    var productPrice : Double?
 
     @IBOutlet weak var productDetailImageView: UIImageView!
     override func viewDidLoad() {
@@ -38,6 +40,8 @@ class BestBuyDemoDetailViewController: UIViewController {
         if self.productID != nil {
             self.productDetailImageView.image = UIImage(named: "\(productID!)d.jpg")
         }
+        
+        fireIntentCall()
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,10 +68,43 @@ class BestBuyDemoDetailViewController: UIViewController {
     }
     @IBAction func buyButtonTapped(sender: AnyObject) {
         self.purchaseCompleteView.hidden = false
+        fireConversionCall()
     }
     @IBAction func purchaseCompleteCloseButtonTapped(sender: AnyObject) {
         
         self.purchaseCompleteView.hidden = true
     }
+    
+    func identfierForAdvertising() -> String {
+        if (ASIdentifierManager.sharedManager().advertisingTrackingEnabled) {
+            var idfa : NSUUID = ASIdentifierManager.sharedManager().advertisingIdentifier
+            
+            return idfa.UUIDString
+        }
+        return ""
+    }
+    
+    func fireIntentCall() {
+        let requestURL = "http://ads.newtypemobile.com/adserver/int?idfa=\(identfierForAdvertising())&product_id=\(self.productID!)&advertiser_id=bestbuy&product_price=\(self.productPrice!)"
+        let url = NSURL(string: requestURL)
+        let request = NSURLRequest(URL: url!)
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {(response, data, error) in
+            println(requestURL)
+        }
+        
+        
+    }
+    
+    func fireConversionCall() {
+        let requestURL = "http://ads.newtypemobile.com/adserver/conv?idfa=\(identfierForAdvertising())&product_id=\(self.productID!)&advertiser_id=candycrush&product_price=\(self.productPrice!)"
+        let url = NSURL(string: requestURL)
+        let request = NSURLRequest(URL: url!)
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {(response, data, error) in
+            println(requestURL)
+        }
+    }
+
 
 }

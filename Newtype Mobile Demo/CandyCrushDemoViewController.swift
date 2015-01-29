@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AdSupport
 
 class CandyCrushDemoViewController: UIViewController {
 
@@ -65,21 +66,41 @@ class CandyCrushDemoViewController: UIViewController {
         })
     }
     
-    @IBAction func buyButtonWasTapped(sender: AnyObject) {
-        println("Buy")
-        self.buyGoldView.alpha = 0
-        self.buyGoldView.hidden = false
+    @IBAction func lollipopBuyButtonWasTapped(sender: AnyObject) {
+        self.purchaseCompleteView.alpha = 0
+        self.purchaseCompleteView.hidden = false
         UIView.animateWithDuration(0.3,
             delay: 0.0,
             options: nil,
             animations: {
-                self.buyGoldView.alpha = 1
+                self.purchaseCompleteView.alpha = 1
                 
             },
             completion: {
                 finished in
         })
+        fireConversionCall("lollipop", productPrice: 2.00)
+        
     }
+    @IBAction func stripedLollipopBuyButtonWasTapped(sender: AnyObject) {
+        println("Buy")
+        self.purchaseCompleteView.alpha = 0
+        self.purchaseCompleteView.hidden = false
+        UIView.animateWithDuration(0.3,
+            delay: 0.0,
+            options: nil,
+            animations: {
+                self.purchaseCompleteView.alpha = 1
+                
+            },
+            completion: {
+                finished in
+        })
+        
+        fireConversionCall("stripelollipop", productPrice: 6.00)
+        
+    }
+
     
     @IBAction func stripedLollipopButtonWasTapped(sender: AnyObject) {
         println("Stripe!")
@@ -95,6 +116,7 @@ class CandyCrushDemoViewController: UIViewController {
             completion: {
                 finished in
         })
+        fireIntentCall("stripelollipop", productPrice: 6.00)
     }
     
     @IBAction func stripedLollipopViewCloseButtonWasTapped(sender: AnyObject) {
@@ -124,6 +146,7 @@ class CandyCrushDemoViewController: UIViewController {
             completion: {
                 finished in
         })
+        fireIntentCall("lollipop", productPrice: 2.00)
         
     }
     @IBAction func buyGoldViewCloseButtonWasTapped(sender: AnyObject) {
@@ -150,6 +173,8 @@ class CandyCrushDemoViewController: UIViewController {
             completion: {
                 finished in
         })
+        
+        fireIntentCall("gold", productPrice: 0.99)
     }
     @IBAction func purchaseCompleteViewCloseButtonWasTapped(sender: AnyObject) {
         self.lollipopView.hidden = true
@@ -169,5 +194,34 @@ class CandyCrushDemoViewController: UIViewController {
         
         
 
+    }
+    
+    func identfierForAdvertising() -> String {
+        if (ASIdentifierManager.sharedManager().advertisingTrackingEnabled) {
+            var idfa : NSUUID = ASIdentifierManager.sharedManager().advertisingIdentifier
+            
+            return idfa.UUIDString
+        }
+        return ""
+    }
+    
+    func fireIntentCall(productID: String, productPrice: Double) {
+        let requestURL = "http://ads.newtypemobile.com/adserver/int?idfa=\(identfierForAdvertising())&product_id=\(productID)&advertiser_id=candycrush&product_price=\(productPrice)"
+        let url = NSURL(string: requestURL)
+        let request = NSURLRequest(URL: url!)
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {(response, data, error) in
+            println(requestURL)
+        }
+    }
+    
+    func fireConversionCall(productID: String, productPrice: Double) {
+        let requestURL = "http://ads.newtypemobile.com/adserver/conv?idfa=\(identfierForAdvertising())&product_id=\(productID)&advertiser_id=candycrush&product_price=\(productPrice)"
+        let url = NSURL(string: requestURL)
+        let request = NSURLRequest(URL: url!)
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {(response, data, error) in
+            println(requestURL)
+        }
     }
 }

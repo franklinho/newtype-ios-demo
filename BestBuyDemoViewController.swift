@@ -8,12 +8,14 @@
 
 import UIKit
 
+
 class BestBuyDemoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var bestBuyDemoTableView: UITableView!
     
     var bestBuyProducts = [3365028,3478006,3986118,4349004]
     var bestBuyProductNames = ["Nikon - Coolpix L830", "Nikon - Coolpix S9600", "Canon - PowerShot SX-700 HS", "Sony - DSC-W800"]
+    var bestBuyProductPrices = [199.99,199.99,279.99,79.99]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +56,7 @@ class BestBuyDemoViewController: UIViewController, UITableViewDelegate, UITableV
             var bestBuyDetailViewController : BestBuyDemoDetailViewController = segue.destinationViewController as BestBuyDemoDetailViewController
             var productIndex = bestBuyDemoTableView.indexPathForSelectedRow()?.row
             bestBuyDetailViewController.productID = self.bestBuyProducts[productIndex!]
+            bestBuyDetailViewController.productPrice = self.bestBuyProductPrices[productIndex!]
             
             bestBuyDetailViewController.title = bestBuyProductNames[productIndex!]
         }
@@ -69,5 +72,8 @@ class BestBuyDemoViewController: UIViewController, UITableViewDelegate, UITableV
         // Pass the selected object to the new view controller.
     }
     */
+    
+
+    
 
 }
