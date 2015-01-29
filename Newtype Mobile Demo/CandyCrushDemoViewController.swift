@@ -14,14 +14,18 @@ class CandyCrushDemoViewController: UIViewController {
     @IBOutlet weak var buyGoldView: UIView!
     @IBOutlet weak var stripedLollipopView: UIView!
     @IBOutlet weak var lollipopView: UIView!
+    var buyGoldHidden = true
+    var lollipopHidden = true
+    var stripedLollipopHidden = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        self.lollipopView.hidden = true
-        self.stripedLollipopView.hidden = true
-        self.buyGoldView.hidden = true
+        self.lollipopView.hidden = lollipopHidden
+        self.stripedLollipopView.hidden = stripedLollipopHidden
+        self.buyGoldView.hidden = buyGoldHidden
         self.purchaseCompleteView.hidden = true
         
         var purchaseCompleteLayer : CALayer = purchaseCompleteView.layer

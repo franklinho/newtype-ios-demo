@@ -116,7 +116,7 @@
         <!--Candy Crush Demo View Controller-->
         <scene sceneID="3XV-HO-1mg">
             <objects>
-                <viewController id="e7B-tF-NcD" customClass="CandyCrushDemoViewController" customModule="Newtype_Mobile_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CandyCrushDemoViewController" id="e7B-tF-NcD" customClass="CandyCrushDemoViewController" customModule="Newtype_Mobile_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kfp-Sn-MmW"/>
                         <viewControllerLayoutGuide type="bottom" id="xzj-cV-33o"/>
@@ -334,13 +334,13 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="hf4-jz-w0Z"/>
                                         <exclude reference="fIc-KI-ez3"/>
+                                        <exclude reference="hf4-jz-w0Z"/>
                                         <exclude reference="jHX-Lt-jgu"/>
-                                        <exclude reference="y4Z-aX-f90"/>
                                         <exclude reference="TWk-ir-VNd"/>
-                                        <exclude reference="cfa-ea-PDD"/>
                                         <exclude reference="a3P-ua-Wed"/>
+                                        <exclude reference="cfa-ea-PDD"/>
+                                        <exclude reference="y4Z-aX-f90"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -426,7 +426,7 @@
         <!--Best Buy Demo View Controller-->
         <scene sceneID="k8D-sP-xbU">
             <objects>
-                <viewController id="NHA-Ye-qvL" customClass="BestBuyDemoViewController" customModule="Newtype_Mobile_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BestBuyDemoViewController" id="NHA-Ye-qvL" customClass="BestBuyDemoViewController" customModule="Newtype_Mobile_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dQ8-CA-mJJ"/>
                         <viewControllerLayoutGuide type="bottom" id="bS6-HV-qDy"/>
@@ -492,7 +492,7 @@
         <!--Best Buy Demo Detail View Controller-->
         <scene sceneID="idH-kS-s7T">
             <objects>
-                <viewController id="GLd-NP-bGE" customClass="BestBuyDemoDetailViewController" customModule="Newtype_Mobile_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BestBuyDemoDetailViewController" id="GLd-NP-bGE" customClass="BestBuyDemoDetailViewController" customModule="Newtype_Mobile_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h9g-DQ-dBv"/>
                         <viewControllerLayoutGuide type="bottom" id="uZm-Xn-h04"/>

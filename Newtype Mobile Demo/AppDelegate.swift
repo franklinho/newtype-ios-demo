@@ -12,6 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -39,6 +40,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+        var rootViewController = self.window!.rootViewController as UINavigationController
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        if url.host == "bestbuy" {
+            var bestBuyViewController = mainStoryboard.instantiateViewControllerWithIdentifier("BestBuyDemoViewController") as BestBuyDemoViewController
+            if url.path == "/main"{
+                rootViewController.pushViewController(bestBuyViewController, animated: true)
+            } else {
+                var bestBuyDetailViewController = mainStoryboard.instantiateViewControllerWithIdentifier("BestBuyDemoDetailViewController") as BestBuyDemoDetailViewController
+                var str = url.path!
+                var productIDString = str.substringFromIndex(advance(str.startIndex, 1))
+                bestBuyDetailViewController.productID = productIDString.toInt()
+                bestBuyDetailViewController.title = bestBuyViewController.bestBuyProductNames[find(bestBuyViewController.bestBuyProducts,productIDString.toInt()!)!]
+                rootViewController.pushViewController(bestBuyDetailViewController, animated: true)
+            }
+            
+        } else if url.host == "candycrush" {
+            var candyCrushViewController = mainStoryboard.instantiateViewControllerWithIdentifier("CandyCrushDemoViewController") as CandyCrushDemoViewController
+            rootViewController.pushViewController(candyCrushViewController, animated: true)
+            if url.path == "/gold" {
+                candyCrushViewController.buyGoldHidden = false
+            } else if url.path == "/lollipop"{
+                candyCrushViewController.lollipopHidden = false
+            } else if url.path == "/stripedlollipop"{
+                candyCrushViewController.stripedLollipopHidden = false
+            }
+            
+        }
+        return true
     }
 
 
