@@ -82,28 +82,29 @@ class BestBuyDemoDetailViewController: UIViewController {
             println("\(productID!)d.jpg")
         }
     }
+    
+    func showApplePay(){
+        let request = PKPaymentRequest()
+        
+        request.merchantIdentifier = ApplePaySwagMerchantID
+        request.supportedNetworks = SupportedPaymentNetworks
+        request.merchantCapabilities = PKMerchantCapability.Capability3DS
+        request.countryCode = "US"
+        request.currencyCode = "USD"
+        
+        request.paymentSummaryItems = [
+            PKPaymentSummaryItem(label: self.title, amount: NSDecimalNumber(double: self.productPrice!)),
+            PKPaymentSummaryItem(label: "Best Buy", amount: NSDecimalNumber(double: self.productPrice!))
+        ]
+        
+        let applePayController = PKPaymentAuthorizationViewController(paymentRequest: request)
+        applePayController.delegate = self
+        self.presentViewController(applePayController, animated: true, completion: nil)
+    }
+    
     @IBAction func buyButtonTapped(sender: AnyObject) {
         if (self.applePayCapable == true) {
-            let request = PKPaymentRequest()
-            
-            request.merchantIdentifier = ApplePaySwagMerchantID
-            request.supportedNetworks = SupportedPaymentNetworks
-            request.merchantCapabilities = PKMerchantCapability.Capability3DS
-            request.countryCode = "US"
-            request.currencyCode = "USD"
-            
-            request.paymentSummaryItems = [
-                PKPaymentSummaryItem(label: self.title, amount: NSDecimalNumber(double: self.productPrice!)),
-                PKPaymentSummaryItem(label: "Best Buy", amount: NSDecimalNumber(double: self.productPrice!))
-            ]
-            
-            let applePayController = PKPaymentAuthorizationViewController(paymentRequest: request)
-            applePayController.delegate = self
-            self.presentViewController(applePayController, animated: true, completion: nil)
-            
-            
-
-            
+            self.showApplePay()
         } else {
             self.purchaseCompleteView.hidden = false
             fireConversionCall()

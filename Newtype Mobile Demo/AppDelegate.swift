@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import PassKit
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-
+    let SupportedPaymentNetworks = [PKPaymentNetworkVisa, PKPaymentNetworkMasterCard, PKPaymentNetworkAmex]
+    let ApplePaySwagMerchantID = "merchant.com.newtypemobile.Newtype-Mobile-Demo"
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -56,7 +59,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 bestBuyDetailViewController.productID = productIDString.toInt()
                 bestBuyDetailViewController.title = bestBuyViewController.bestBuyProductNames[find(bestBuyViewController.bestBuyProducts,productIDString.toInt()!)!]
                 bestBuyDetailViewController.productPrice = bestBuyViewController.bestBuyProductPrices[find(bestBuyViewController.bestBuyProducts,productIDString.toInt()!)!]
+                
+                if (PKPaymentAuthorizationViewController.canMakePaymentsUsingNetworks(SupportedPaymentNetworks)){
+                    
+                    bestBuyDetailViewController.applePayCapable = true
+                }
                 rootViewController.pushViewController(bestBuyDetailViewController, animated: true)
+                if (PKPaymentAuthorizationViewController.canMakePaymentsUsingNetworks(SupportedPaymentNetworks)){
+                    
+                    bestBuyDetailViewController.showApplePay()
+                }
             }
             
         } else if url.host == "candycrush" {
