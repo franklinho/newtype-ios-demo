@@ -8,27 +8,43 @@
 
 import UIKit
 import AdSupport
+import PassKit
 
 class BestBuyDemoDetailViewController: UIViewController {
     
+
+    let SupportedPaymentNetworks = [PKPaymentNetworkVisa, PKPaymentNetworkMasterCard, PKPaymentNetworkAmex]
+    let ApplePaySwagMerchantID = "merchant.com.newtypemobile.Newtype-Mobile-Demo"
     @IBOutlet weak var purchaseCompleteView: UIView!
     @IBOutlet weak var buyButton: UIButton!
     var productID : Int?
     var productPrice : Double?
+    var applePayCapable : Bool?
+    var productName : String?
 
     @IBOutlet weak var productDetailImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        if (PKPaymentAuthorizationViewController.canMakePaymentsUsingNetworks(SupportedPaymentNetworks)){
+            self.applePayCapable = true
+            buyButton.setTitle("", forState: UIControlState.Normal)
+            buyButton.setImage(UIImage(named: "ApplePayButton"), forState: UIControlState.Normal)
+            
+        } else {
+            var buttonLayer : CALayer = buyButton.layer
+            
+            buttonLayer.masksToBounds = true
+            buttonLayer.cornerRadius = 5.0
+            buttonLayer.borderColor = UIColor.blackColor().CGColor
+            buttonLayer.borderWidth = 2.0
+        }
+        
         self.purchaseCompleteView.hidden = true
         
-        var buttonLayer : CALayer = buyButton.layer
         
-        buttonLayer.masksToBounds = true
-        buttonLayer.cornerRadius = 5.0
-        buttonLayer.borderColor = UIColor.blackColor().CGColor
-        buttonLayer.borderWidth = 2.0
         
         var purchaseCompleteLayer : CALayer = purchaseCompleteView.layer
         
@@ -63,12 +79,38 @@ class BestBuyDemoDetailViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         if self.productID != nil {
             self.productDetailImageView.image = UIImage(named: "\(productID!)d.jpg")
-            println("\(productID)d.jpg")
+            println("\(productID!)d.jpg")
         }
     }
     @IBAction func buyButtonTapped(sender: AnyObject) {
-        self.purchaseCompleteView.hidden = false
-        fireConversionCall()
+        if (self.applePayCapable == true) {
+            let request = PKPaymentRequest()
+            
+            request.merchantIdentifier = ApplePaySwagMerchantID
+            request.supportedNetworks = SupportedPaymentNetworks
+            request.merchantCapabilities = PKMerchantCapability.Capability3DS
+            request.countryCode = "US"
+            request.currencyCode = "USD"
+            
+            request.paymentSummaryItems = [
+                PKPaymentSummaryItem(label: self.title, amount: NSDecimalNumber(double: self.productPrice!)),
+                PKPaymentSummaryItem(label: "Best Buy", amount: NSDecimalNumber(double: self.productPrice!))
+            ]
+            
+            let applePayController = PKPaymentAuthorizationViewController(paymentRequest: request)
+            applePayController.delegate = self
+            self.presentViewController(applePayController, animated: true, completion: nil)
+            
+            
+
+            
+        } else {
+            self.purchaseCompleteView.hidden = false
+            fireConversionCall()
+        }
+        
+        
+        
     }
     @IBAction func purchaseCompleteCloseButtonTapped(sender: AnyObject) {
         
@@ -97,7 +139,7 @@ class BestBuyDemoDetailViewController: UIViewController {
     }
     
     func fireConversionCall() {
-        let requestURL = "http://ads.newtypemobile.com/adserver/conv?idfa=\(identfierForAdvertising())&product_id=\(self.productID!)&advertiser_id=candycrush&product_price=\(self.productPrice!)"
+        let requestURL = "http://ads.newtypemobile.com/adserver/conv?idfa=\(identfierForAdvertising())&product_id=\(self.productID!)&advertiser_id=bestbuy&product_price=\(self.productPrice!)"
         let url = NSURL(string: requestURL)
         let request = NSURLRequest(URL: url!)
         
@@ -107,4 +149,58 @@ class BestBuyDemoDetailViewController: UIViewController {
     }
 
 
+}
+
+extension BestBuyDemoDetailViewController: PKPaymentAuthorizationViewControllerDelegate {
+    func paymentAuthorizationViewController(controller: PKPaymentAuthorizationViewController!, didAuthorizePayment payment: PKPayment!, completion: ((PKPaymentAuthorizationStatus) -> Void)!) {
+        
+        // 2
+        Stripe.setDefaultPublishableKey("pk_test_hBpc3qwWTpzxaYoXEnul3hvp")  // Replace With Your Own Key!
+        
+        // 3
+        
+        STPAPIClient.sharedClient().createTokenWithPayment(payment) {
+            (token, error) -> Void in
+            if (error != nil) {
+                println(error)
+                completion(PKPaymentAuthorizationStatus.Failure)
+                return
+            }
+            
+            // 4
+            
+            // 5
+            let url = NSURL(string: "http://ads.newtypemobile.com/adserver/pay")  // Replace with computers local IP Address!
+            let request = NSMutableURLRequest(URL: url!)
+            request.HTTPMethod = "POST"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.setValue("application/json", forHTTPHeaderField: "Accept")
+            
+            // 6
+            let body = ["stripeToken": token.tokenId,
+                "amount": NSDecimalNumber(double: self.productPrice!),
+                "description": self.title!
+            ]
+            
+            var error: NSError?
+            request.HTTPBody = NSJSONSerialization.dataWithJSONObject(body, options: NSJSONWritingOptions(), error: &error)
+            
+            // 7
+            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response, data, error) -> Void in
+                if (error != nil) {
+                    completion(PKPaymentAuthorizationStatus.Failure)
+                } else {
+                    completion(PKPaymentAuthorizationStatus.Success)
+                    self.fireConversionCall()
+                    
+                }
+            }
+        }
+
+    }
+    
+    
+    func paymentAuthorizationViewControllerDidFinish(controller: PKPaymentAuthorizationViewController!) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
+    }
 }

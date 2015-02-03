@@ -575,7 +575,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="buyButton" destination="3jm-nF-nfu" id="8GO-oC-c0d"/>
+                        <outlet property="buyButton" destination="3jm-nF-nfu" id="boL-WP-xLX"/>
                         <outlet property="productDetailImageView" destination="gTo-MI-LW8" id="Vra-Lf-TGl"/>
                         <outlet property="purchaseCompleteView" destination="1Mj-gO-BfX" id="W0U-rD-Omw"/>
                     </connections>

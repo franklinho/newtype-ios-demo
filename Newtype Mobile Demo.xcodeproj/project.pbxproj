@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C5ABC9C4E0BA5F59F0B79C9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E33EDF35FB6097EA76B1F3D /* libPods.a */; };
+		DD5611C31A81501C0005E2E0 /* ApplePayBTN_64pt__black_textLogo_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD5611C01A81501C0005E2E0 /* ApplePayBTN_64pt__black_textLogo_@2x.png */; };
+		DD5611C41A81501C0005E2E0 /* ApplePayBTN_64pt__black_textLogo_@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD5611C11A81501C0005E2E0 /* ApplePayBTN_64pt__black_textLogo_@3x.png */; };
+		DD5611C51A81501C0005E2E0 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = DD5611C21A81501C0005E2E0 /* Contents.json */; };
 		DDA43F7C1A76D0560074FDCD /* BestBuyDemoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA43F7B1A76D0560074FDCD /* BestBuyDemoDetailViewController.swift */; };
 		DDA43F801A76D7050074FDCD /* cart.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA43F7F1A76D7050074FDCD /* cart.png */; };
 		DDA43F821A76DBD80074FDCD /* close_button.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA43F811A76DBD80074FDCD /* close_button.png */; };
@@ -21,7 +25,7 @@
 		DDDC81CE1A76C6B0009B233A /* 3365028.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DDDC81C61A76C6B0009B233A /* 3365028.jpg */; };
 		DDDC81CF1A76C6B0009B233A /* 3365028d.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DDDC81C71A76C6B0009B233A /* 3365028d.jpg */; };
 		DDDC81D01A76C6B0009B233A /* 3478006.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DDDC81C81A76C6B0009B233A /* 3478006.jpg */; };
-		DDDC81D11A76C6B0009B233A /* 3478006D.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DDDC81C91A76C6B0009B233A /* 3478006D.jpg */; };
+		DDDC81D11A76C6B0009B233A /* 3478006d.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DDDC81C91A76C6B0009B233A /* 3478006d.jpg */; };
 		DDDC81D21A76C6B0009B233A /* 3986118.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DDDC81CA1A76C6B0009B233A /* 3986118.jpg */; };
 		DDDC81D31A76C6B0009B233A /* 3986118d.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DDDC81CB1A76C6B0009B233A /* 3986118d.jpg */; };
 		DDDC81D41A76C6B0009B233A /* 4349004.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DDDC81CC1A76C6B0009B233A /* 4349004.jpg */; };
@@ -46,6 +50,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E33EDF35FB6097EA76B1F3D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		99D7A87DAF3A5C4BFA0666B2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		AB134F3040D2B99915DF3FC4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		DD5611BE1A814F7E0005E2E0 /* Newtype Mobile Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Newtype Mobile Demo.entitlements"; sourceTree = "<group>"; };
+		DD5611C01A81501C0005E2E0 /* ApplePayBTN_64pt__black_textLogo_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ApplePayBTN_64pt__black_textLogo_@2x.png"; sourceTree = "<group>"; };
+		DD5611C11A81501C0005E2E0 /* ApplePayBTN_64pt__black_textLogo_@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ApplePayBTN_64pt__black_textLogo_@3x.png"; sourceTree = "<group>"; };
+		DD5611C21A81501C0005E2E0 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		DD5611C61A815BD40005E2E0 /* Newtype Mobile Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Newtype Mobile Demo-Bridging-Header.h"; sourceTree = "<group>"; };
+		DD5611C71A815BD50005E2E0 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DDA43F7B1A76D0560074FDCD /* BestBuyDemoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BestBuyDemoDetailViewController.swift; sourceTree = "<group>"; };
 		DDA43F7F1A76D7050074FDCD /* cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cart.png; sourceTree = "<group>"; };
 		DDA43F811A76DBD80074FDCD /* close_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close_button.png; sourceTree = "<group>"; };
@@ -64,7 +77,7 @@
 		DDDC81C61A76C6B0009B233A /* 3365028.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3365028.jpg; sourceTree = "<group>"; };
 		DDDC81C71A76C6B0009B233A /* 3365028d.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3365028d.jpg; sourceTree = "<group>"; };
 		DDDC81C81A76C6B0009B233A /* 3478006.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3478006.jpg; sourceTree = "<group>"; };
-		DDDC81C91A76C6B0009B233A /* 3478006D.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3478006D.jpg; sourceTree = "<group>"; };
+		DDDC81C91A76C6B0009B233A /* 3478006d.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3478006d.jpg; sourceTree = "<group>"; };
 		DDDC81CA1A76C6B0009B233A /* 3986118.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3986118.jpg; sourceTree = "<group>"; };
 		DDDC81CB1A76C6B0009B233A /* 3986118d.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3986118d.jpg; sourceTree = "<group>"; };
 		DDDC81CC1A76C6B0009B233A /* 4349004.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4349004.jpg; sourceTree = "<group>"; };
@@ -83,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C5ABC9C4E0BA5F59F0B79C9 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,12 +110,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F0FCB7EF520101D41E3E357 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E33EDF35FB6097EA76B1F3D /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		31FFAA55128AA0EB7AE39E45 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				99D7A87DAF3A5C4BFA0666B2 /* Pods.debug.xcconfig */,
+				AB134F3040D2B99915DF3FC4 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DD5611BF1A81501C0005E2E0 /* ApplePaySwagButton.imageset */ = {
+			isa = PBXGroup;
+			children = (
+				DD5611C01A81501C0005E2E0 /* ApplePayBTN_64pt__black_textLogo_@2x.png */,
+				DD5611C11A81501C0005E2E0 /* ApplePayBTN_64pt__black_textLogo_@3x.png */,
+				DD5611C21A81501C0005E2E0 /* Contents.json */,
+			);
+			path = ApplePaySwagButton.imageset;
+			sourceTree = "<group>";
+		};
 		DDDC81931A76BB63009B233A = {
 			isa = PBXGroup;
 			children = (
+				DD5611C71A815BD50005E2E0 /* ViewController.h */,
+				DD5611BF1A81501C0005E2E0 /* ApplePaySwagButton.imageset */,
 				DDDC819E1A76BB63009B233A /* Newtype Mobile Demo */,
 				DDDC81B41A76BB64009B233A /* Newtype Mobile DemoTests */,
 				DDDC819D1A76BB63009B233A /* Products */,
+				31FFAA55128AA0EB7AE39E45 /* Pods */,
+				2F0FCB7EF520101D41E3E357 /* Frameworks */,
+				DD5611C61A815BD40005E2E0 /* Newtype Mobile Demo-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +163,7 @@
 		DDDC819E1A76BB63009B233A /* Newtype Mobile Demo */ = {
 			isa = PBXGroup;
 			children = (
+				DD5611BE1A814F7E0005E2E0 /* Newtype Mobile Demo.entitlements */,
 				DDFDD2601A7ACD8F008DDE8C /* CandyCrushDemo */,
 				DDE3AB121A771073005FD592 /* BestBuyDemo */,
 				DDA43F7F1A76D7050074FDCD /* cart.png */,
@@ -162,7 +209,7 @@
 				DDDC81C61A76C6B0009B233A /* 3365028.jpg */,
 				DDDC81C71A76C6B0009B233A /* 3365028d.jpg */,
 				DDDC81C81A76C6B0009B233A /* 3478006.jpg */,
-				DDDC81C91A76C6B0009B233A /* 3478006D.jpg */,
+				DDDC81C91A76C6B0009B233A /* 3478006d.jpg */,
 				DDDC81CA1A76C6B0009B233A /* 3986118.jpg */,
 				DDDC81CB1A76C6B0009B233A /* 3986118d.jpg */,
 				DDDC81CC1A76C6B0009B233A /* 4349004.jpg */,
@@ -211,9 +258,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDDC81BB1A76BB64009B233A /* Build configuration list for PBXNativeTarget "Newtype Mobile Demo" */;
 			buildPhases = (
+				8F54D6367839B4E420A17BBA /* Check Pods Manifest.lock */,
 				DDDC81981A76BB63009B233A /* Sources */,
 				DDDC81991A76BB63009B233A /* Frameworks */,
 				DDDC819A1A76BB63009B233A /* Resources */,
+				7AE2E3AC777ACE58203AB778 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,6 +303,11 @@
 					DDDC819B1A76BB63009B233A = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = GHV3FCRD8M;
+						SystemCapabilities = {
+							com.apple.OMC = {
+								enabled = 1;
+							};
+						};
 					};
 					DDDC81B01A76BB64009B233A = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -289,8 +343,9 @@
 				DDDC81CF1A76C6B0009B233A /* 3365028d.jpg in Resources */,
 				DDE3AB0D1A770F20005FD592 /* candy_lollipop.jpg in Resources */,
 				DDDC81D51A76C6B0009B233A /* 4349004d.jpg in Resources */,
-				DDDC81D11A76C6B0009B233A /* 3478006D.jpg in Resources */,
+				DDDC81D11A76C6B0009B233A /* 3478006d.jpg in Resources */,
 				DDDC81A71A76BB64009B233A /* Main.storyboard in Resources */,
+				DD5611C41A81501C0005E2E0 /* ApplePayBTN_64pt__black_textLogo_@3x.png in Resources */,
 				DDA43F821A76DBD80074FDCD /* close_button.png in Resources */,
 				DDDC81D01A76C6B0009B233A /* 3478006.jpg in Resources */,
 				DDE3AB0E1A770F20005FD592 /* candy_gold.jpg in Resources */,
@@ -299,6 +354,8 @@
 				DDDC81CE1A76C6B0009B233A /* 3365028.jpg in Resources */,
 				DDDC81D31A76C6B0009B233A /* 3986118d.jpg in Resources */,
 				DDDC81AC1A76BB64009B233A /* LaunchScreen.xib in Resources */,
+				DD5611C31A81501C0005E2E0 /* ApplePayBTN_64pt__black_textLogo_@2x.png in Resources */,
+				DD5611C51A81501C0005E2E0 /* Contents.json in Resources */,
 				DDE3AB0C1A770F20005FD592 /* candy_gameplay.jpg in Resources */,
 				DDDC81D21A76C6B0009B233A /* 3986118.jpg in Resources */,
 				DDA43F801A76D7050074FDCD /* cart.png in Resources */,
@@ -314,6 +371,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7AE2E3AC777ACE58203AB778 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F54D6367839B4E420A17BBA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DDDC81981A76BB63009B233A /* Sources */ = {
@@ -395,6 +485,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
+					STRIPE_ENABLE_APPLEPAY,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -433,6 +524,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = STRIPE_ENABLE_APPLEPAY;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -448,27 +540,36 @@
 		};
 		DDDC81BC1A76BB64009B233A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99D7A87DAF3A5C4BFA0666B2 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Newtype Mobile Demo/Newtype Mobile Demo.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Newtype Mobile Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Newtype Mobile Demo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		DDDC81BD1A76BB64009B233A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB134F3040D2B99915DF3FC4 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Newtype Mobile Demo/Newtype Mobile Demo.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Newtype Mobile Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Newtype Mobile Demo-Bridging-Header.h";
 			};
 			name = Release;
 		};
